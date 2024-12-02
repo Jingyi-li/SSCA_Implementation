@@ -1,0 +1,8 @@
+aie/data/*.txt
+aie/output/*.txt
+aie_opt/data/*.txt
+aie_src/data/*.txt
+host/data/*.txt
+host/data/*.dat
+host/*.dat
+matlab/*.dat

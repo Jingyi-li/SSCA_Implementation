@@ -1,0 +1,19 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Print input test
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+data = reshape(data.',[],1);
+
+for t=1:2
+		
+    % input in int32 format
+    a = data(t:2:end);
+    a = reshape(a.', 1, []); a = [real(a);imag(a)]; a = float2int(a);
+
+    fid = fopen(sprintf('../aie/data/cdp_test_%02d%c.txt', i-1, 'a'+t-1), 'wt');
+    fprintf(fid, '%d %d\n', a);
+    fclose(fid);
+
+end
